@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+const endpoint = "https://kea-alt-del.dk/t7/api/products";
+const data = await fetch(endpoint).then((response) => response.json());
+console.log(data);
+---
+
+
+<Layout>
+    <h2>Products</h2>
+    <h3>{data[0].productdisplayname}</h3>
+</Layout>
+
